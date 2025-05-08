@@ -1,6 +1,6 @@
 import { GlobalStykes } from "./globalstyles/globalstyles";
-import { ContactSection } from "./pages/Contact";
-import { Footer } from "./pages/Footer";
+import { ContactSection } from "./pages/contact";
+import { Footer } from "./pages/footer";
 import LandingPage from "./pages/hero";
 import { Portfolio } from "./pages/portifolio";
 import { Servicing } from "./pages/servicing";
