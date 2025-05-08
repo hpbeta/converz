@@ -16,7 +16,7 @@ import {
   Tag,
   Title,
 } from "./styles";
-import { DotsPattern } from "../Footer/styles";
+import { DotsPattern } from "../footer/styles";
 
 export function AboutSection() {
   const benefits = [
