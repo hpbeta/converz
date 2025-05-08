@@ -14,7 +14,7 @@ import {
   CodeHeader,
   CodeHeaderRight,
 } from "./styles";
-import { Header } from "../Header";
+import { Header } from "../../pages/header";
 
 const LandingPage = () => {
   const codeRef = useRef(null);
