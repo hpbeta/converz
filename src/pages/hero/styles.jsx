@@ -2,20 +2,19 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 80px;
   background: linear-gradient(to bottom, #020617, #0f172a);
   color: white;
   flex-wrap: wrap;
-  height: 800px;
+  min-height: 100vh;
 
-  @media (max-width: 768px) {
-    padding: 20px;
+  @media (max-width: 1024px) {
     flex-direction: column;
-    justify-content: center;
-    margin-top: 70px;
-    height: 400px;
+    padding: 40px 20px;
+    gap: 40px;
   }
 `;
 
@@ -23,7 +22,7 @@ export const TextContent = styled.div`
   max-width: 700px;
   flex: 1;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     max-width: 100%;
     text-align: center;
   }
@@ -47,19 +46,23 @@ export const Title = styled.h1`
 
   @media (max-width: 768px) {
     font-size: 40px;
-    line-height: 40px;
+    line-height: 45px;
+    margin-top: 60px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 30px;
+    line-height: 38px;
   }
 `;
 
 export const Description = styled.p`
   font-size: 1.2rem;
   margin: 20px 0;
-  width: 650px;
   color: #d0d6e5;
   line-height: 29px;
 
   @media (max-width: 768px) {
-    width: 100%;
     font-size: 1rem;
     text-align: center;
   }
@@ -68,7 +71,7 @@ export const Description = styled.p`
 export const Button = styled.a`
   display: flex;
   justify-content: center;
-  margin-top: 30px;
+  align-items: center;
   gap: 5px;
   background: linear-gradient(to right, #ffa500, #ff8c00);
   color: white;
@@ -79,6 +82,8 @@ export const Button = styled.a`
   border-radius: 10px;
   width: 200px;
   text-align: center;
+  margin-top: 30px;
+  transition: 0.3s;
 
   &:hover {
     background-color: #e85a00;
@@ -86,31 +91,27 @@ export const Button = styled.a`
 
   @media (max-width: 768px) {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     font-size: 16px;
   }
 `;
 
 export const CodeSnippet = styled.div`
   color: white;
-  padding: 20px;
-  border-radius: 8px;
+  width: 100%;
+  max-width: 700px;
   font-family: monospace;
   font-size: 1rem;
-  width: 50%;
+  position: relative;
 
   pre {
-    border-radius: 20px;
     background-color: #131b2e;
     padding: 20px;
+    border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.2);
-    position: relative;
+    overflow-x: auto;
   }
 
-  @media (max-width: 768px) {
-    width: 100%;
-    padding: 10px;
-  }
   @media (max-width: 820px) {
     display: none;
   }
@@ -119,7 +120,6 @@ export const CodeSnippet = styled.div`
 export const CodeHeader = styled.div`
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
   padding: 10px 16px;
@@ -130,24 +130,21 @@ export const CodeHeader = styled.div`
   font-family: "Inter", sans-serif;
   font-size: 0.875rem;
   position: absolute;
-  z-index: 1;
-  width: 670px;
-  top: 194px;
+  top: -45px;
+  left: 20px;
+  right: 20px;
 
   @media (max-width: 768px) {
-    width: auto;
-    top: 150px;
-    padding: 8px 10px;
+    font-size: 0.8rem;
+    padding: 8px 12px;
   }
 `;
 
 export const CodeHeaderRight = styled.div`
   color: #ccc;
   font-style: italic;
-  margin-left: 260px;
 
   @media (max-width: 768px) {
-    margin-left: 0;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
   }
 `;

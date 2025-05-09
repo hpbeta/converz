@@ -11,8 +11,6 @@ import {
   Description,
   TextContent,
   Title,
-  CodeHeader,
-  CodeHeaderRight,
 } from "./styles";
 import { Header } from "../../pages/header";
 
@@ -62,9 +60,6 @@ export default LandingPage;
           </Button>
         </TextContent>
         <CodeSnippet>
-          <CodeHeader>
-            <CodeHeaderRight>converz-project.jsx</CodeHeaderRight>
-          </CodeHeader>
           <pre>
             <code ref={codeRef} className="language-jsx">
               {code}
