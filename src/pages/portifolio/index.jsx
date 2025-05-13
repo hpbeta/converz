@@ -1,24 +1,32 @@
 import {
   Card,
   CardContent,
-  CardDescription,
-  CardImage,
   CardTitle,
   Paragraph,
   PortfolioCardContainer,
   PortfolioSection,
   PortfolioWrapper,
   Title,
-  ViewButton,
-} from "./styles";
-import luisa from "../../assets/luisa.png";
+  ViewProjectButton, // novo
+} from './styles';
+
+import luisa from '../../assets/luisa.png';
+import karine from '../../assets/karine.png';
 
 const portfolioItem = [
   {
     id: 1,
-    title: "Luisa Fernandez",
-    description: "Landing page para psicóloga Luisa Fernandez",
+    title: 'Luisa Fernandez',
+    description: 'Landing page para psicóloga Luisa Fernandez',
     image: luisa,
+    link: 'https://landingpage-luisa.vercel.app/',
+  },
+  {
+    id: 2,
+    title: 'Karine Dias',
+    description: 'Landing page para curso de redação enem Karine Dias',
+    image: karine,
+    link: 'https://karine-dias.vercel.app/', // substitua com o link correto depois
   },
 ];
 
@@ -26,46 +34,30 @@ export function Portfolio() {
   return (
     <PortfolioSection id="portfolio">
       <PortfolioWrapper>
-        <div style={{ textAlign: "center", marginBottom: "4rem" }}>
-          <Title>
-            Nossos <span>projetos</span> recentes
-          </Title>
-          <Paragraph>
-            Explore nossa coleção de landing pages que ajudaram empresas a
-            aumentar sua presença online e taxas de conversão.
-          </Paragraph>
-        </div>
+        <Title>
+          Projetos <span>realizados</span>
+        </Title>
+
+        <Paragraph>
+          Aqui estão algumas landing pages desenvolvidas para profissionais e empresas que buscavam uma presença online de impacto.
+        </Paragraph>
 
         <PortfolioCardContainer>
           {portfolioItem.map((item) => (
             <Card key={item.id}>
-              <CardImage src={item.image} alt={item.title} />
+              <img src={item.image} alt={item.title} />
               <CardContent>
                 <CardTitle>{item.title}</CardTitle>
-                <CardDescription>{item.description}</CardDescription>
-                <ViewButton
-                  href="https://landingpage-luisa.vercel.app/"
-                  target="_blank"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M14 5l7 7m0 0l-7 7m7-7H3"
-                    />
-                  </svg>
-                </ViewButton>
+                <Paragraph>{item.description}</Paragraph>
+                <ViewProjectButton href={item.link} target="_blank" rel="noopener noreferrer">
+                  Ver projeto
+                </ViewProjectButton>
               </CardContent>
             </Card>
           ))}
         </PortfolioCardContainer>
+
+      
       </PortfolioWrapper>
     </PortfolioSection>
   );
