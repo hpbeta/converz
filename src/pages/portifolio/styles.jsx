@@ -34,8 +34,10 @@ export const Paragraph = styled.p`
 `;
 
 export const PortfolioCardContainer = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
   gap: 2rem;
   margin-top: 2rem;
 `;
@@ -45,6 +47,8 @@ export const Card = styled.div`
   border: 1px solid rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(8px);
   border-radius: 0.75rem;
+  width: 560px;
+  height: 480px;
   overflow: hidden;
   transition: border 0.3s ease;
 
@@ -54,7 +58,7 @@ export const Card = styled.div`
 
   img {
     width: 100%;
-    height: 200px;
+    height: 270px;
     object-fit: cover;
     transition: transform 0.5s ease;
 
@@ -91,3 +95,5 @@ export const ViewProjectButton = styled.a`
     background-color: #ff7043;
   }
 `;
+
+
