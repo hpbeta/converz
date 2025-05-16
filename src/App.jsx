@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { GlobalStykes } from "./globalstyles/globalstyles";
-import { MainPage } from "./pages/MainPage";
-import { PrivacyPolicy } from "./pages/PrivacyPolicy";
-import { TermsOfUse } from "./pages/TermsOfUse";
+import { PrivacyPolicy } from "./pages/privacyPolicy";
+import { TermsOfUse } from "./pages/termsOfUse";
+import { MainPage } from "./pages/mainPage/index"
 
 function App() {
   return (
