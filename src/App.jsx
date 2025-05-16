@@ -1,23 +1,20 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { GlobalStykes } from "./globalstyles/globalstyles";
-import { ContactSection } from "./pages/contact";
-import { Footer } from "./pages/footer";
-import LandingPage from "./pages/hero";
-import { Portfolio } from "./pages/portifolio";
-import { Servicing } from "./pages/servicing";
-import { WhatsappButton } from "./pages/whatsappButton";
-import { AboutSection } from "./pages/aboutUs";
+import { MainPage } from "./pages/MainPage";
+import { PrivacyPolicy } from "./pages/PrivacyPolicy";
+import { TermsOfUse } from "./pages/TermsOfUse";
 
 function App() {
   return (
     <>
       <GlobalStykes />
-      <LandingPage />
-      <Servicing />
-      <AboutSection />
-      <Portfolio />
-      <ContactSection />
-      <Footer />
-      <WhatsappButton />
+      <Router>
+        <Routes>
+          <Route path="/" element={<MainPage />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-of-use" element={<TermsOfUse />} />
+        </Routes>
+      </Router>
     </>
   );
 }

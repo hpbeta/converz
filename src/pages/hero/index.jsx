@@ -14,7 +14,7 @@ import {
 } from "./styles";
 import { Header } from "../../pages/header";
 
-const LandingPage = () => {
+export function LandingPage  ()  {
   const codeRef = useRef(null);
 
   useEffect(() => {
@@ -71,4 +71,3 @@ export default LandingPage;
   );
 };
 
-export default LandingPage;

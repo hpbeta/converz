@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import {
   BlueLinkUnderline,
   BluePrefix,
@@ -80,6 +81,20 @@ export function Footer() {
                   </LinkListItem>
                 )
               )}
+
+              {/* Novos links para Política de Privacidade e Termos de Uso */}
+              <LinkListItem>
+                <StyledLink to="/privacy-policy" as={Link}>
+                  <LinkPrefix>#</LinkPrefix> Política de Privacidade
+                  <LinkUnderline />
+                </StyledLink>
+              </LinkListItem>
+              <LinkListItem>
+                <StyledLink to="/terms-of-use" as={Link}>
+                  <LinkPrefix>#</LinkPrefix> Termos de Uso
+                  <LinkUnderline />
+                </StyledLink>
+              </LinkListItem>
             </LinkList>
           </div>
 
