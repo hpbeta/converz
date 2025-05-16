@@ -44,3 +44,12 @@ export const FooterNote = styled.p`
   font-size: 0.875rem;
   color: #a0aec0; /* cinza claro */
 `;
+
+export const Link = styled.a`
+  background-color: #808080;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+`

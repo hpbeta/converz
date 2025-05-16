@@ -1,4 +1,4 @@
-import { Container, FooterNote, LinkStyled, List, Paragraph, Subtitle, Title } from "./style";
+import { Container, FooterNote, LinkStyled, List, Paragraph, Subtitle, Title, Link } from "./style";
 
 export function PrivacyPolicy() {
   return (
@@ -48,6 +48,7 @@ export function PrivacyPolicy() {
       </Paragraph>
 
       <FooterNote>Última atualização: 15 de maio de 2025</FooterNote>
+      <Link href="/">Voltar</Link>
     </Container>
   );
 }

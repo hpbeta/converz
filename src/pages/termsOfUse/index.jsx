@@ -1,4 +1,4 @@
-import { Container, FooterNote, LinkStyled, Paragraph, Subtitle, Title } from "./styles";
+import { Container, FooterNote, LinkStyled, Paragraph, Subtitle, Title, Link } from "./styles";
 
 
 
@@ -37,6 +37,7 @@ export function TermsOfUse() {
       </Paragraph>
 
       <FooterNote>Última atualização: 15 de maio de 2025</FooterNote>
+      <Link href="/">Voltar</Link>
     </Container>
   );
 }
